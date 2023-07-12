@@ -1,12 +1,18 @@
 import React from 'react'
+import InventoryItemCard from './InventoryItemCard';
 
-function CurrentInventoryList() {
+
+function CurrentInventoryList({inventory, handleClick, handleDelete}) {
 
     return(
         <div id="current-inventory">
             <h2>Current Inventory</h2>
             <div>
-                {/** Put inventory items here */}
+                {
+                    inventory.map( item => {
+                        return <InventoryItemCard key={item.id} handleDelete={handleDelete} inInventory={true} item={item} handleClick={handleClick}/>
+                    })
+                }
             </div>
         </div>
     );
