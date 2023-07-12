@@ -21,11 +21,19 @@ function InventoryManager() {
                 })
     }, [])
 
-    function handleClick(itemName) {
-        setIsReorder({
-            ...isReorder,
-            [itemName]: !isReorder[itemName]
-        })
+    function handleClick(itemName, tester) {
+        console.log(isReorder[itemName]);
+        if (!isReorder[itemName]) {
+            setIsReorder({
+                ...isReorder,
+                [itemName]: !isReorder[itemName]
+            })
+        } else if (!tester) {
+            setIsReorder({
+                ...isReorder,
+                [itemName]: !isReorder[itemName]
+            })
+        } else return null
     }
 
     function handleDelete(itemId) {

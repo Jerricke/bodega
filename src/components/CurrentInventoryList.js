@@ -10,7 +10,7 @@ function CurrentInventoryList({inventory, handleClick, handleDelete}) {
             <div>
                 {
                     inventory.map( item => {
-                        return <InventoryItemCard key={item.id} handleDelete={handleDelete} inInventory={true} item={item} handleClick={handleClick}/>
+                        return <InventoryItemCard key={item.id} handleDelete={handleDelete} tester={true} item={item} handleClick={handleClick}/>
                     })
                 }
             </div>
