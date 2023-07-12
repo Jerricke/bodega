@@ -22,7 +22,6 @@ function InventoryManager() {
     }, [])
 
     function handleClick(itemName, tester) {
-        console.log(isReorder[itemName]);
         if (!isReorder[itemName]) {
             setIsReorder({
                 ...isReorder,
