@@ -8,7 +8,7 @@ function ReorderInventoryList({inventory, handleClick, isReorder}) {
             <div>
             {
                 inventory.map( item => {
-                    if (isReorder[item.name]) {
+                    if (isReorder[item.name]) { //if the reorder state for the specific item is true, render the card
                         return <InventoryItemCard key={item.id} item={item} handleClick={handleClick}/>
                     } else return null
                 })
